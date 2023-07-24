@@ -2,7 +2,7 @@
   {
     "id": 1,
     "company": "Scoot",
-    "logo": "/devjobs-web-app/assets/logos/scoot.svg",
+    "logo": "/devjobs-web-app/public/logos/scoot.svg",
     "logoBackground": "hsl(36, 87%, 49%)",
     "position": "Senior Software Engineer",
     "postedAt": "5h ago",
@@ -33,7 +33,7 @@
   {
     "id": 2,
     "company": "Blogr",
-    "logo": "../src/assets/logos/blogr.svg",
+    "logo": "/logos/blogr.svg",
     "logoBackground": "hsl(12, 79%, 52%)",
     "position": "Haskell and PureScript Dev",
     "postedAt": "20h ago",
