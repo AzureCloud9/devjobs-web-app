@@ -1,8 +1,10 @@
-[
+import img1 from "./logos/scoot.svg"
+
+export const data = [
   {
     "id": 1,
     "company": "Scoot",
-    "logo": "/logos/scoot.svg",
+    "logo": img1,
     "logoBackground": "hsl(36, 87%, 49%)",
     "position": "Senior Software Engineer",
     "postedAt": "5h ago",
