@@ -4,15 +4,14 @@ import { data } from '../../public/data'; // Import the data directly from data.
 
 export default function Home() {
   const [search, setSearch] = useState('');
-  const [job, setJobs] = useState([]);
-  const [job2, setJobs2] = useState([]);
-
+  const [jobs, setJobs] = useState([]); // Changed the state name to 'jobs' instead of 'job'
+  const [filteredJobs, setFilteredJobs] = useState([]); // New state to store the filtered jobs
   const [visibleItems, setVisibleItems] = useState(12); // State to keep track of visible items
 
   useEffect(() => {
     // Since you are now directly importing the data, no need for the fetch request
     setJobs(data);
-    setJobs2(data);
+    setFilteredJobs(data); // Initialize filteredJobs with the original data
   }, []);
 
   // Function to handle "Load More" button click
@@ -27,15 +26,16 @@ export default function Home() {
 
   // Function to filter jobs based on the search term
   const filterJobs = () => {
-    // If the search term is empty, show all jobs
+    // If the search term is empty, show all jobs from the original data
     if (search === '') {
-      setJobs(job2);
+      setFilteredJobs(jobs);
     } else {
-      // Filter the jobs based on the search term
-      const filteredJobs = job.filter(item =>
-        item.company.toLowerCase().includes(search.toLowerCase())
+      // Filter the jobs based on the search term from the original 'jobs' state
+      const filteredJobs = jobs.filter(item =>
+        item.company.toLowerCase().includes(search.toLowerCase()) ||
+        item.position.toLowerCase().includes(search.toLowerCase())
       );
-      setJobs(filteredJobs);
+      setFilteredJobs(filteredJobs);
     }
   };
 
@@ -43,7 +43,7 @@ export default function Home() {
     <div className="bg-color8 h-[100%] h-screen flex flex-col justify-start items-center">
       <SearchBar setSearch={setSearch} handleSearch={handleSearch} />
       <div className="w-[100vw] flex flex-col justify-start items-center mt-[96px]">
-        {job.slice(0, visibleItems).map((item) => (
+        {filteredJobs.slice(0, visibleItems).map((item) => (
           <div key={item.id} className="w-[327px] h-[240px] bg-color10 mb-[49px]">
             <div
               className="w-[50px] h-[50px] rounded-xl absolute mt-[-25px] ml-[32px] flex justify-center items-center"
@@ -62,7 +62,7 @@ export default function Home() {
             </div>
           </div>
         ))}
-        {visibleItems < job.length && (
+        {visibleItems < filteredJobs.length && (
           <button onClick={handleLoadMore} className="text-color4 font-bold mt-4">
             Load More
           </button>
