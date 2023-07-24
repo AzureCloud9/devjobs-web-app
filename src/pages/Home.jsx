@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import SearchBar from "../components/SearchBar";
 import { data } from '../../public/data'; // Import the data directly from data.js
 
@@ -7,12 +7,16 @@ export default function Home() {
   const [jobs, setJobs] = useState([]); // Changed the state name to 'jobs' instead of 'job'
   const [filteredJobs, setFilteredJobs] = useState([]); // New state to store the filtered jobs
   const [visibleItems, setVisibleItems] = useState(12); // State to keep track of visible items
+  
+  
 
+  
   useEffect(() => {
     // Since you are now directly importing the data, no need for the fetch request
     setJobs(data);
     setFilteredJobs(data); // Initialize filteredJobs with the original data
   }, []);
+
 
   // Function to handle "Load More" button click
   const handleLoadMore = () => {
@@ -39,8 +43,11 @@ export default function Home() {
     }
   };
 
+
+
   return (
-    <div className="bg-color8 h-[100%] h-screen flex flex-col justify-start items-center">
+
+    <div className="bg-color8 h-[100%] flex flex-col justify-start items-center"> 
       <SearchBar setSearch={setSearch} handleSearch={handleSearch} />
       <div className="w-[100vw] flex flex-col justify-start items-center mt-[96px]">
         {filteredJobs.slice(0, visibleItems).map((item) => (
@@ -63,8 +70,8 @@ export default function Home() {
           </div>
         ))}
         {visibleItems < filteredJobs.length && (
-          <button onClick={handleLoadMore} className="text-color4 font-bold mt-4">
-            Load More
+          <button onClick={handleLoadMore} className="w-[141px] h-[48px] bg-color9 flex justify-center items-center text-color4 font-bold mt-4 mb-[50px]">
+            <p>Load More</p>
           </button>
         )}
       </div>
