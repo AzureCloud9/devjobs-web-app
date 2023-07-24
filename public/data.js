@@ -1,4 +1,19 @@
-import img1 from "./logos/scoot.svg"
+import img1 from "./logos/scoot.svg";
+import img2 from "./logos/blogr.svg";
+import img3 from "../src/assets/logos/vector.svg";
+import img4 from "../src/assets/logos/officelite.svg";
+import img5 from "../src/assets/logos/pod.svg";
+import img6 from "../src/assets/logos/creative.svg";
+import img7 from "../src/assets/logos/pomodoro.svg";
+import img8 from "../src/assets/logos/maker.svg";
+import img9 from "../src/assets/logos/coffeeroasters.svg";
+import img10 from "../src/assets/logos/mastercraft.svg";
+import img11 from "../src/assets/logos/crowdfund.svg";
+import img12 from "../src/assets/logos/typemaster.svg";
+import img13 from "../src/assets/logos/crowdfund.svg";
+import img14 from "../src/assets/logos/coffeeroasters.svg";
+import img15 from "../src/assets/logos/blogr.svg";
+
 
 export const data = [
   {
@@ -35,7 +50,7 @@ export const data = [
   {
     "id": 2,
     "company": "Blogr",
-    "logo": "/logos/blogr.svg",
+    "logo": img2,
     "logoBackground": "hsl(12, 79%, 52%)",
     "position": "Haskell and PureScript Dev",
     "postedAt": "20h ago",
@@ -66,7 +81,7 @@ export const data = [
   {
     "id": 3,
     "company": "Vector",
-    "logo": "../src/assets/logos/vector.svg",
+    "logo": img3,
     "logoBackground": "hsl(235, 10%, 23%)",
     "position": "Midlevel Back End Engineer",
     "postedAt": "1d ago",
@@ -96,7 +111,7 @@ export const data = [
   {
     "id": 4,
     "company": "Office Lite",
-    "logo": "../src/assets/logos/officelite.svg",
+    "logo": img4,
     "logoBackground": "hsl(227, 62%, 48%)",
     "position": "Senior Application Engineer",
     "postedAt": "2d ago",
@@ -128,7 +143,7 @@ export const data = [
   {
     "id": 5,
     "company": "Pod",
-    "logo": "../src/assets/logos/pod.svg",
+    "logo": img5,
     "logoBackground": "hsl(216, 46%, 14%)",
     "position": "Remote DevOps Engineer",
     "postedAt": "2d ago",
@@ -164,7 +179,7 @@ export const data = [
   {
     "id": 6,
     "company": "Creative",
-    "logo": "../src/assets/logos/creative.svg",
+    "logo": img6,
     "logoBackground": "hsl(295, 55%, 21%)",
     "position": "Desktop Support Manager",
     "postedAt": "4d ago",
@@ -198,7 +213,7 @@ export const data = [
   {
     "id": 7,
     "company": "Pomodoro",
-    "logo": "../src/assets/logos/pomodoro.svg",
+    "logo": img7,
     "logoBackground": "hsl(254, 71%, 45%)",
     "position": "iOS Engineer",
     "postedAt": "1w ago",
@@ -229,7 +244,7 @@ export const data = [
   {
     "id": 8,
     "company": "Maker",
-    "logo": "../src/assets/logos/maker.svg",
+    "logo": img8,
     "logoBackground": "hsl(218, 58%, 31%)",
     "position": "Senior EJB Developer",
     "postedAt": "1w ago",
@@ -260,7 +275,7 @@ export const data = [
   {
     "id": 9,
     "company": "Coffeeroasters",
-    "logo": "../src/assets/logos/coffeeroasters.svg",
+    "logo": img9,
     "logoBackground": "hsl(29, 60%, 87%)",
     "position": "Senior Frontend Developer",
     "postedAt": "1w ago",
@@ -291,7 +306,7 @@ export const data = [
   {
     "id": 10,
     "company": "Mastercraft",
-    "logo": "../src/assets/logos/mastercraft.svg",
+    "logo": img10,
     "logoBackground": "hsl(0, 0%, 12%)",
     "position": "App & Website Designer",
     "postedAt": "2w ago",
@@ -324,7 +339,7 @@ export const data = [
   {
     "id": 11,
     "company": "Crowdfund",
-    "logo": "../src/assets/logos/crowdfund.svg",
+    "logo": img11,
     "logoBackground": "hsl(157, 57%, 50%)",
     "position": "Fullstack Developer",
     "postedAt": "1mo ago",
@@ -357,7 +372,7 @@ export const data = [
   {
     "id": 12,
     "company": "Typemaster",
-    "logo": "../src/assets/logos/typemaster.svg",
+    "logo": img12,
     "logoBackground": "hsl(22, 89%, 52%)",
     "position": "Technical Lead Engineer",
     "postedAt": "1mo ago",
@@ -389,7 +404,7 @@ export const data = [
   {
     "id": 13,
     "company": "Crowdfund",
-    "logo": "../src/assets/logos/crowdfund.svg",
+    "logo": img13,
     "logoBackground": "hsl(157, 57%, 50%)",
     "position": "Front-end Developer",
     "postedAt": "1mo ago",
@@ -421,7 +436,7 @@ export const data = [
   {
     "id": 14,
     "company": "Coffeeroasters",
-    "logo": "../src/assets/logos/coffeeroasters.svg",
+    "logo": img14,
     "logoBackground": "hsl(29, 60%, 87%)",
     "position": "Junior Full-Stack Developer",
     "postedAt": "1mo ago",
@@ -453,7 +468,7 @@ export const data = [
   {
     "id": 15,
     "company": "Blogr",
-    "logo": "../src/assets/logos/blogr.svg",
+    "logo": img15,
     "logoBackground": "hsl(12, 79%, 52%)",
     "position": "Midweight Front-end Developer",
     "postedAt": "1mo ago",
