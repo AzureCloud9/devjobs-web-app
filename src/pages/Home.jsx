@@ -10,15 +10,15 @@ export default function Home() {
   const [visibleItems, setVisibleItems] = useState(12); // State to keep track of visible items
 
   useEffect(() => {
-    fetch('/data.json')
+    fetch('/devjobs-web-app/data.json')
       .then((response) => response.json())
       .then((data) => {
-        setJobs(data)
-        setJobs2(data)
-
+        setJobs(data);
+        setJobs2(data);
       })
       .catch((error) => console.log('error', error));
   }, []);
+  
 
   // Function to handle "Load More" button click
   const handleLoadMore = () => {
