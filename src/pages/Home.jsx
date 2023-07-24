@@ -1,24 +1,19 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import SearchBar from "../components/SearchBar";
-import imgtest from '../assets/logos/blogr.svg';
+import { data } from '../../public/data'; // Import the data directly from data.js
 
 export default function Home() {
-  const [search, setSearch] = useState('')
+  const [search, setSearch] = useState('');
   const [job, setJobs] = useState([]);
   const [job2, setJobs2] = useState([]);
 
   const [visibleItems, setVisibleItems] = useState(12); // State to keep track of visible items
 
   useEffect(() => {
-    fetch('/devjobs-web-app/data.json')
-      .then((response) => response.json())
-      .then((data) => {
-        setJobs(data);
-        setJobs2(data);
-      })
-      .catch((error) => console.log('error', error));
+    // Since you are now directly importing the data, no need for the fetch request
+    setJobs(data);
+    setJobs2(data);
   }, []);
-  
 
   // Function to handle "Load More" button click
   const handleLoadMore = () => {
@@ -34,7 +29,7 @@ export default function Home() {
   const filterJobs = () => {
     // If the search term is empty, show all jobs
     if (search === '') {
-      setJobs(job2) 
+      setJobs(job2);
     } else {
       // Filter the jobs based on the search term
       const filteredJobs = job.filter(item =>
@@ -50,8 +45,10 @@ export default function Home() {
       <div className="w-[100vw] flex flex-col justify-start items-center mt-[96px]">
         {job.slice(0, visibleItems).map((item) => (
           <div key={item.id} className="w-[327px] h-[240px] bg-color10 mb-[49px]">
-            <div className="w-[50px] h-[50px]  rounded-xl absolute mt-[-25px] ml-[32px] flex justify-center items-center" 
-                  style={{ backgroundColor: item.logoBackground }}>
+            <div
+              className="w-[50px] h-[50px] rounded-xl absolute mt-[-25px] ml-[32px] flex justify-center items-center"
+              style={{ backgroundColor: item.logoBackground }}
+            >
               <img src={item.logo} alt="img" />
             </div>
             <div className="flex mt-[49px] ml-[32px] text-color7 mb-[16px] font-normal text-[16px]">
