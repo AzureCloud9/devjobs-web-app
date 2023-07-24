@@ -50,7 +50,8 @@ export default function Home() {
       <div className="w-[100vw] flex flex-col justify-start items-center mt-[96px]">
         {job.slice(0, visibleItems).map((item) => (
           <div key={item.id} className="w-[327px] h-[240px] bg-color10 mb-[49px]">
-            <div className="w-[50px] h-[50px] bg-rose-600 rounded-xl absolute mt-[-25px] ml-[32px] flex justify-center items-center">
+            <div className="w-[50px] h-[50px]  rounded-xl absolute mt-[-25px] ml-[32px] flex justify-center items-center" 
+                  style={{ backgroundColor: item.logoBackground }}>
               <img src={item.logo} alt="img" />
             </div>
             <div className="flex mt-[49px] ml-[32px] text-color7 mb-[16px] font-normal text-[16px]">
