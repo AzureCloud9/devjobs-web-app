@@ -10,7 +10,7 @@ export default function Home() {
   const [visibleItems, setVisibleItems] = useState(12); // State to keep track of visible items
 
   useEffect(() => {
-    fetch('/src/data.json')
+    fetch('/data.json')
       .then((response) => response.json())
       .then((data) => {
         setJobs(data)
