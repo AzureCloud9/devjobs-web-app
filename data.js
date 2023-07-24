@@ -1,5 +1,5 @@
-import img1 from "./logos/scoot.svg";
-import img2 from "./logos/blogr.svg";
+import img1 from "../src/assets/logos/scoot.svg";
+import img2 from "../src/assets/logos/blogr.svg";
 import img3 from "../src/assets/logos/vector.svg";
 import img4 from "../src/assets/logos/officelite.svg";
 import img5 from "../src/assets/logos/pod.svg";
